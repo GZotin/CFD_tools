@@ -1,0 +1,12 @@
+C:\Users\Gustavo\source\repos\CFD tools\CFD tools\bin\Debug\CFD tools.exe.config
+C:\Users\Gustavo\source\repos\CFD tools\CFD tools\bin\Debug\CFD tools.exe
+C:\Users\Gustavo\source\repos\CFD tools\CFD tools\bin\Debug\CFD tools.pdb
+C:\Users\Gustavo\source\repos\CFD tools\CFD tools\bin\Debug\CFD tools.xml
+C:\Users\Gustavo\source\repos\CFD tools\CFD tools\obj\Debug\CFD tools.vbproj.AssemblyReference.cache
+C:\Users\Gustavo\source\repos\CFD tools\CFD tools\obj\Debug\CFD_tools.Resources.resources
+C:\Users\Gustavo\source\repos\CFD tools\CFD tools\obj\Debug\CFD tools.vbproj.GenerateResource.cache
+C:\Users\Gustavo\source\repos\CFD tools\CFD tools\obj\Debug\CFD tools.vbproj.CoreCompileInputs.cache
+C:\Users\Gustavo\source\repos\CFD tools\CFD tools\obj\Debug\CFD tools.exe
+C:\Users\Gustavo\source\repos\CFD tools\CFD tools\obj\Debug\CFD tools.xml
+C:\Users\Gustavo\source\repos\CFD tools\CFD tools\obj\Debug\CFD tools.pdb
+C:\Users\Gustavo\source\repos\CFD tools\CFD tools\obj\Debug\CFD_tools.main_page.resources
