@@ -24,7 +24,6 @@ Partial Class main_page
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.txtReynolds = New System.Windows.Forms.TextBox()
         Me.btnCalculate = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -42,11 +41,35 @@ Partial Class main_page
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtVelocity = New System.Windows.Forms.TextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.txtNuTilda = New System.Windows.Forms.TextBox()
+        Me.labelNuTilda = New System.Windows.Forms.Label()
+        Me.btnCalculateTM = New System.Windows.Forms.Button()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.txtC_mu = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.txtl = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.txtI = New System.Windows.Forms.TextBox()
+        Me.txtEpsOmega = New System.Windows.Forms.TextBox()
+        Me.txtk = New System.Windows.Forms.TextBox()
+        Me.labelEpsOmega = New System.Windows.Forms.Label()
+        Me.labelK = New System.Windows.Forms.Label()
+        Me.btnInputs2 = New System.Windows.Forms.Button()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.txtReTM = New System.Windows.Forms.TextBox()
+        Me.txtDhTM = New System.Windows.Forms.TextBox()
+        Me.txtVelocityTM = New System.Windows.Forms.TextBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.cmdTurbModel = New System.Windows.Forms.ComboBox()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.txtY = New System.Windows.Forms.TextBox()
         Me.cmdCalculateYplus = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.txtY = New System.Windows.Forms.TextBox()
         Me.txtMuYplus = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.txtYplus = New System.Windows.Forms.TextBox()
@@ -59,8 +82,10 @@ Partial Class main_page
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -74,12 +99,11 @@ Partial Class main_page
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(661, 637)
+        Me.TabControl1.Size = New System.Drawing.Size(364, 561)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.PictureBox1)
         Me.TabPage1.Controls.Add(Me.txtReynolds)
         Me.TabPage1.Controls.Add(Me.btnCalculate)
         Me.TabPage1.Controls.Add(Me.Label4)
@@ -87,22 +111,13 @@ Partial Class main_page
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(653, 611)
+        Me.TabPage1.Size = New System.Drawing.Size(356, 535)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Reynolds Number"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Location = New System.Drawing.Point(74, 9)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(239, 120)
-        Me.PictureBox1.TabIndex = 13
-        Me.PictureBox1.TabStop = False
-        '
         'txtReynolds
         '
-        Me.txtReynolds.Location = New System.Drawing.Point(189, 482)
+        Me.txtReynolds.Location = New System.Drawing.Point(195, 426)
         Me.txtReynolds.Name = "txtReynolds"
         Me.txtReynolds.ReadOnly = True
         Me.txtReynolds.Size = New System.Drawing.Size(99, 20)
@@ -111,7 +126,7 @@ Partial Class main_page
         '
         'btnCalculate
         '
-        Me.btnCalculate.Location = New System.Drawing.Point(124, 439)
+        Me.btnCalculate.Location = New System.Drawing.Point(141, 360)
         Me.btnCalculate.Name = "btnCalculate"
         Me.btnCalculate.Size = New System.Drawing.Size(75, 23)
         Me.btnCalculate.TabIndex = 12
@@ -121,7 +136,7 @@ Partial Class main_page
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(56, 485)
+        Me.Label4.Location = New System.Drawing.Point(62, 429)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(91, 13)
         Me.Label4.TabIndex = 11
@@ -141,7 +156,7 @@ Partial Class main_page
         Me.GroupBox1.Controls.Add(Me.txtRefDim)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.txtVelocity)
-        Me.GroupBox1.Location = New System.Drawing.Point(38, 135)
+        Me.GroupBox1.Location = New System.Drawing.Point(33, 34)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(291, 270)
         Me.GroupBox1.TabIndex = 10
@@ -151,7 +166,7 @@ Partial Class main_page
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(21, 206)
+        Me.RadioButton2.Location = New System.Drawing.Point(21, 201)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton2.TabIndex = 11
@@ -161,7 +176,7 @@ Partial Class main_page
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(21, 138)
+        Me.RadioButton1.Location = New System.Drawing.Point(21, 131)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton1.TabIndex = 10
@@ -171,7 +186,7 @@ Partial Class main_page
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(43, 225)
+        Me.Label6.Location = New System.Drawing.Point(43, 220)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(79, 13)
         Me.Label6.TabIndex = 9
@@ -180,8 +195,9 @@ Partial Class main_page
         '
         'txtRho
         '
-        Me.txtRho.Location = New System.Drawing.Point(176, 222)
+        Me.txtRho.Location = New System.Drawing.Point(176, 217)
         Me.txtRho.Name = "txtRho"
+        Me.txtRho.ReadOnly = True
         Me.txtRho.Size = New System.Drawing.Size(99, 20)
         Me.txtRho.TabIndex = 8
         Me.txtRho.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -189,7 +205,7 @@ Partial Class main_page
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(43, 190)
+        Me.Label5.Location = New System.Drawing.Point(43, 185)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(121, 13)
         Me.Label5.TabIndex = 7
@@ -198,8 +214,9 @@ Partial Class main_page
         '
         'txtMu
         '
-        Me.txtMu.Location = New System.Drawing.Point(176, 187)
+        Me.txtMu.Location = New System.Drawing.Point(176, 182)
         Me.txtMu.Name = "txtMu"
+        Me.txtMu.ReadOnly = True
         Me.txtMu.Size = New System.Drawing.Size(99, 20)
         Me.txtMu.TabIndex = 6
         Me.txtMu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -207,7 +224,7 @@ Partial Class main_page
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(43, 137)
+        Me.Label3.Location = New System.Drawing.Point(43, 130)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(126, 13)
         Me.Label3.TabIndex = 5
@@ -216,8 +233,9 @@ Partial Class main_page
         '
         'txtNu
         '
-        Me.txtNu.Location = New System.Drawing.Point(176, 134)
+        Me.txtNu.Location = New System.Drawing.Point(176, 127)
         Me.txtNu.Name = "txtNu"
+        Me.txtNu.ReadOnly = True
         Me.txtNu.Size = New System.Drawing.Size(99, 20)
         Me.txtNu.TabIndex = 4
         Me.txtNu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -260,12 +278,254 @@ Partial Class main_page
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.txtNuTilda)
+        Me.TabPage2.Controls.Add(Me.labelNuTilda)
+        Me.TabPage2.Controls.Add(Me.btnCalculateTM)
+        Me.TabPage2.Controls.Add(Me.GroupBox4)
+        Me.TabPage2.Controls.Add(Me.txtEpsOmega)
+        Me.TabPage2.Controls.Add(Me.txtk)
+        Me.TabPage2.Controls.Add(Me.labelEpsOmega)
+        Me.TabPage2.Controls.Add(Me.labelK)
+        Me.TabPage2.Controls.Add(Me.btnInputs2)
+        Me.TabPage2.Controls.Add(Me.GroupBox3)
+        Me.TabPage2.Controls.Add(Me.cmdTurbModel)
+        Me.TabPage2.Controls.Add(Me.Label12)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(653, 611)
+        Me.TabPage2.Size = New System.Drawing.Size(356, 535)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Turbulence Model"
+        '
+        'txtNuTilda
+        '
+        Me.txtNuTilda.Location = New System.Drawing.Point(222, 479)
+        Me.txtNuTilda.Name = "txtNuTilda"
+        Me.txtNuTilda.ReadOnly = True
+        Me.txtNuTilda.Size = New System.Drawing.Size(100, 20)
+        Me.txtNuTilda.TabIndex = 16
+        Me.txtNuTilda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtNuTilda.Visible = False
+        '
+        'labelNuTilda
+        '
+        Me.labelNuTilda.AutoSize = True
+        Me.labelNuTilda.Location = New System.Drawing.Point(33, 482)
+        Me.labelNuTilda.Name = "labelNuTilda"
+        Me.labelNuTilda.Size = New System.Drawing.Size(132, 13)
+        Me.labelNuTilda.TabIndex = 15
+        Me.labelNuTilda.Text = "Turbulent vicosity modified"
+        Me.labelNuTilda.Visible = False
+        '
+        'btnCalculateTM
+        '
+        Me.btnCalculateTM.Location = New System.Drawing.Point(141, 423)
+        Me.btnCalculateTM.Name = "btnCalculateTM"
+        Me.btnCalculateTM.Size = New System.Drawing.Size(75, 23)
+        Me.btnCalculateTM.TabIndex = 12
+        Me.btnCalculateTM.Text = "Calculate"
+        Me.btnCalculateTM.UseVisualStyleBackColor = True
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.Label20)
+        Me.GroupBox4.Controls.Add(Me.txtC_mu)
+        Me.GroupBox4.Controls.Add(Me.Label14)
+        Me.GroupBox4.Controls.Add(Me.txtl)
+        Me.GroupBox4.Controls.Add(Me.Label13)
+        Me.GroupBox4.Controls.Add(Me.txtI)
+        Me.GroupBox4.Location = New System.Drawing.Point(38, 272)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(283, 132)
+        Me.GroupBox4.TabIndex = 14
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "Inputs 2"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(15, 98)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(87, 13)
+        Me.Label20.TabIndex = 12
+        Me.Label20.Text = "Coefficient C_mu"
+        '
+        'txtC_mu
+        '
+        Me.txtC_mu.Location = New System.Drawing.Point(163, 98)
+        Me.txtC_mu.Name = "txtC_mu"
+        Me.txtC_mu.Size = New System.Drawing.Size(100, 20)
+        Me.txtC_mu.TabIndex = 12
+        Me.txtC_mu.Text = "0,09"
+        Me.txtC_mu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(15, 61)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(112, 13)
+        Me.Label14.TabIndex = 3
+        Me.Label14.Text = "Turbulent length scale"
+        '
+        'txtl
+        '
+        Me.txtl.Location = New System.Drawing.Point(163, 61)
+        Me.txtl.Name = "txtl"
+        Me.txtl.Size = New System.Drawing.Size(100, 20)
+        Me.txtl.TabIndex = 11
+        Me.txtl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(15, 27)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(125, 13)
+        Me.Label13.TabIndex = 2
+        Me.Label13.Text = "Initial turbulence intensity"
+        '
+        'txtI
+        '
+        Me.txtI.Location = New System.Drawing.Point(163, 27)
+        Me.txtI.Name = "txtI"
+        Me.txtI.Size = New System.Drawing.Size(100, 20)
+        Me.txtI.TabIndex = 10
+        Me.txtI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtEpsOmega
+        '
+        Me.txtEpsOmega.Location = New System.Drawing.Point(222, 495)
+        Me.txtEpsOmega.Name = "txtEpsOmega"
+        Me.txtEpsOmega.ReadOnly = True
+        Me.txtEpsOmega.Size = New System.Drawing.Size(100, 20)
+        Me.txtEpsOmega.TabIndex = 14
+        Me.txtEpsOmega.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtEpsOmega.Visible = False
+        '
+        'txtk
+        '
+        Me.txtk.Location = New System.Drawing.Point(222, 462)
+        Me.txtk.Name = "txtk"
+        Me.txtk.ReadOnly = True
+        Me.txtk.Size = New System.Drawing.Size(100, 20)
+        Me.txtk.TabIndex = 13
+        Me.txtk.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtk.Visible = False
+        '
+        'labelEpsOmega
+        '
+        Me.labelEpsOmega.AutoSize = True
+        Me.labelEpsOmega.Location = New System.Drawing.Point(35, 498)
+        Me.labelEpsOmega.Name = "labelEpsOmega"
+        Me.labelEpsOmega.Size = New System.Drawing.Size(134, 13)
+        Me.labelEpsOmega.TabIndex = 9
+        Me.labelEpsOmega.Text = "Turbulence dissipation rate"
+        Me.labelEpsOmega.Visible = False
+        '
+        'labelK
+        '
+        Me.labelK.AutoSize = True
+        Me.labelK.Location = New System.Drawing.Point(35, 462)
+        Me.labelK.Name = "labelK"
+        Me.labelK.Size = New System.Drawing.Size(136, 13)
+        Me.labelK.TabIndex = 7
+        Me.labelK.Text = "Turbulent kinetic energy (k)"
+        Me.labelK.Visible = False
+        '
+        'btnInputs2
+        '
+        Me.btnInputs2.Location = New System.Drawing.Point(120, 232)
+        Me.btnInputs2.Name = "btnInputs2"
+        Me.btnInputs2.Size = New System.Drawing.Size(129, 23)
+        Me.btnInputs2.TabIndex = 8
+        Me.btnInputs2.Text = "Calculate inputs 2"
+        Me.btnInputs2.UseVisualStyleBackColor = True
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.txtReTM)
+        Me.GroupBox3.Controls.Add(Me.txtDhTM)
+        Me.GroupBox3.Controls.Add(Me.txtVelocityTM)
+        Me.GroupBox3.Controls.Add(Me.Label18)
+        Me.GroupBox3.Controls.Add(Me.Label17)
+        Me.GroupBox3.Controls.Add(Me.Label16)
+        Me.GroupBox3.Location = New System.Drawing.Point(38, 71)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(284, 142)
+        Me.GroupBox3.TabIndex = 7
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Inputs"
+        '
+        'txtReTM
+        '
+        Me.txtReTM.Location = New System.Drawing.Point(163, 100)
+        Me.txtReTM.Name = "txtReTM"
+        Me.txtReTM.Size = New System.Drawing.Size(100, 20)
+        Me.txtReTM.TabIndex = 9
+        Me.txtReTM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtDhTM
+        '
+        Me.txtDhTM.Location = New System.Drawing.Point(163, 66)
+        Me.txtDhTM.Name = "txtDhTM"
+        Me.txtDhTM.Size = New System.Drawing.Size(100, 20)
+        Me.txtDhTM.TabIndex = 8
+        Me.txtDhTM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtVelocityTM
+        '
+        Me.txtVelocityTM.Location = New System.Drawing.Point(163, 28)
+        Me.txtVelocityTM.Name = "txtVelocityTM"
+        Me.txtVelocityTM.Size = New System.Drawing.Size(100, 20)
+        Me.txtVelocityTM.TabIndex = 7
+        Me.txtVelocityTM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(15, 35)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(71, 13)
+        Me.Label18.TabIndex = 6
+        Me.Label18.Text = "Velocity [m/s]"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(15, 69)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(120, 13)
+        Me.Label17.TabIndex = 5
+        Me.Label17.Text = "Characteristic length [m]"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(15, 103)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(51, 13)
+        Me.Label16.TabIndex = 4
+        Me.Label16.Text = "Reynolds"
+        '
+        'cmdTurbModel
+        '
+        Me.cmdTurbModel.FormattingEnabled = True
+        Me.cmdTurbModel.Items.AddRange(New Object() {"k-epsilon", "k-omega", "Spalart-Allmaras"})
+        Me.cmdTurbModel.Location = New System.Drawing.Point(191, 32)
+        Me.cmdTurbModel.Name = "cmdTurbModel"
+        Me.cmdTurbModel.Size = New System.Drawing.Size(121, 21)
+        Me.cmdTurbModel.TabIndex = 1
+        Me.cmdTurbModel.Text = "Select a model"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(53, 35)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(93, 13)
+        Me.Label12.TabIndex = 0
+        Me.Label12.Text = "Turbulence Model"
         '
         'TabPage3
         '
@@ -276,13 +536,21 @@ Partial Class main_page
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(653, 611)
+        Me.TabPage3.Size = New System.Drawing.Size(356, 535)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Wall Distance (Y+)"
         '
+        'txtY
+        '
+        Me.txtY.Location = New System.Drawing.Point(193, 453)
+        Me.txtY.Name = "txtY"
+        Me.txtY.ReadOnly = True
+        Me.txtY.Size = New System.Drawing.Size(100, 20)
+        Me.txtY.TabIndex = 10
+        '
         'cmdCalculateYplus
         '
-        Me.cmdCalculateYplus.Location = New System.Drawing.Point(141, 320)
+        Me.cmdCalculateYplus.Location = New System.Drawing.Point(141, 362)
         Me.cmdCalculateYplus.Name = "cmdCalculateYplus"
         Me.cmdCalculateYplus.Size = New System.Drawing.Size(75, 23)
         Me.cmdCalculateYplus.TabIndex = 9
@@ -292,7 +560,7 @@ Partial Class main_page
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(70, 377)
+        Me.Label11.Location = New System.Drawing.Point(64, 456)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(90, 13)
         Me.Label11.TabIndex = 1
@@ -310,20 +578,12 @@ Partial Class main_page
         Me.GroupBox2.Controls.Add(Me.Label9)
         Me.GroupBox2.Controls.Add(Me.Label8)
         Me.GroupBox2.Controls.Add(Me.Label7)
-        Me.GroupBox2.Location = New System.Drawing.Point(38, 32)
+        Me.GroupBox2.Location = New System.Drawing.Point(29, 32)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(299, 255)
         Me.GroupBox2.TabIndex = 0
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Inputs"
-        '
-        'txtY
-        '
-        Me.txtY.Location = New System.Drawing.Point(199, 374)
-        Me.txtY.Name = "txtY"
-        Me.txtY.ReadOnly = True
-        Me.txtY.Size = New System.Drawing.Size(100, 20)
-        Me.txtY.TabIndex = 10
         '
         'txtMuYplus
         '
@@ -409,16 +669,23 @@ Partial Class main_page
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(661, 637)
+        Me.ClientSize = New System.Drawing.Size(364, 561)
         Me.Controls.Add(Me.TabControl1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "main_page"
         Me.Text = "CFD Tools"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
@@ -441,7 +708,6 @@ Partial Class main_page
     Friend WithEvents txtVelocity As TextBox
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents TabPage3 As TabPage
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label6 As Label
     Friend WithEvents txtRho As TextBox
     Friend WithEvents Label5 As Label
@@ -462,4 +728,28 @@ Partial Class main_page
     Friend WithEvents txtMuYplus As TextBox
     Friend WithEvents Label15 As Label
     Friend WithEvents txtY As TextBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents cmdTurbModel As ComboBox
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents labelEpsOmega As Label
+    Friend WithEvents labelK As Label
+    Friend WithEvents btnInputs2 As Button
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents txtEpsOmega As TextBox
+    Friend WithEvents txtk As TextBox
+    Friend WithEvents txtl As TextBox
+    Friend WithEvents txtI As TextBox
+    Friend WithEvents txtReTM As TextBox
+    Friend WithEvents txtDhTM As TextBox
+    Friend WithEvents txtVelocityTM As TextBox
+    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents btnCalculateTM As Button
+    Friend WithEvents Label20 As Label
+    Friend WithEvents txtC_mu As TextBox
+    Friend WithEvents txtNuTilda As TextBox
+    Friend WithEvents labelNuTilda As Label
 End Class
