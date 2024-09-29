@@ -416,7 +416,7 @@ Partial Class main_page
         'labelEpsOmega
         '
         Me.labelEpsOmega.AutoSize = True
-        Me.labelEpsOmega.Location = New System.Drawing.Point(35, 498)
+        Me.labelEpsOmega.Location = New System.Drawing.Point(35, 500)
         Me.labelEpsOmega.Name = "labelEpsOmega"
         Me.labelEpsOmega.Size = New System.Drawing.Size(134, 13)
         Me.labelEpsOmega.TabIndex = 9
@@ -426,7 +426,7 @@ Partial Class main_page
         'labelK
         '
         Me.labelK.AutoSize = True
-        Me.labelK.Location = New System.Drawing.Point(35, 462)
+        Me.labelK.Location = New System.Drawing.Point(35, 464)
         Me.labelK.Name = "labelK"
         Me.labelK.Size = New System.Drawing.Size(136, 13)
         Me.labelK.TabIndex = 7
